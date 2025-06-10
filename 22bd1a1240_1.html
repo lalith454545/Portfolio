@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #131921;
+            color: white;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;
+            margin-right: 20px;
+        }
+        .search-bar {
+            flex-grow: 1;
+            padding: 5px;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: 200px;
+            object-fit: contain;
+        }
+        .add-to-cart {
+            background-color: #f0c14b;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #232f3e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon Logo" class="logo">
+        <input type="text" placeholder="Search Amazon" class="search-bar">
+    </header>
+
+    <main>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71jG+e7roXL.AC_UY327_FMwebp_QL65.jpg" alt="Kindle Paperwhite">
+            <h3>Kindle Paperwhite</h3>
+            <p>$139.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71Swqqe7XAL.AC_SX466.jpg" alt="Amazon Echo">
+            <h3>Amazon Echo (4th Gen)</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/61EXU8BuGZL.AC_SX466.jpg" alt="Fire TV Stick 4K">
+            <h3>Fire TV Stick 4K</h3>
+            <p>$49.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="https://m.media-amazon.com/images/I/71NU1XmM9-L.AC_SX466.jpg" alt="Ring Video Doorbell">
+            <h3>Ring Video Doorbell</h3>
+            <p>$99.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Amazon Clone. All rights reserved.</p>
+    </footer>
+</body>
+</html>

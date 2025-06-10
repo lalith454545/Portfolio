@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Lalith Srinandan - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(4, 4, 63);
+            color: white;
+            font-family: "Poppins", sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+            background-color: rgb(14, 14, 104);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(158, 158, 216);
+            font-size: 1.1rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .left a {
+            text-decoration: none;
+            color: inherit;
+            /* Keeps the text color consistent */
+        }
+
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 70px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: rgb(154, 71, 231);
+        }
+
+        #element {
+            color: rgb(154, 71, 231);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .aboutSection {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(4, 4, 63);
+            color: white;
+        }
+
+        .aboutContent {
+            text-align: center;
+            max-width: 60%;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .projectsSection {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(4, 4, 63);
+            color: white;
+            text-align: center;
+        }
+
+        .projectsContent {
+            max-width: 70%;
+        }
+
+        .projectsContent h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .project {
+            background-color: rgb(14, 14, 104);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .project h3 {
+            font-size: 2rem;
+            color: rgb(154, 71, 231);
+        }
+
+        .project p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .githubLink {
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(154, 71, 231);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+
+        .githubLink:hover {
+            background-color: rgb(110, 50, 180);
+        }
+
+        .resumeSection {
+            height: 100vh;
+            /* Full screen */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(4, 4, 63);
+            color: white;
+            text-align: center;
+        }
+
+        .resumeContent {
+            max-width: 60%;
+        }
+
+        .resumeContent h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .resumeButtons {
+            margin-top: 20px;
+        }
+
+        .resumeButton {
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(154, 71, 231);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            margin: 10px;
+        }
+
+        .resumeButton:hover {
+            background-color: rgb(110, 50, 180);
+        }
+
+        .contactSection {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(4, 4, 63);
+            color: white;
+            text-align: center;
+        }
+
+        .contactContent {
+            max-width: 60%;
+        }
+
+        .contactContent h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .contactLinks {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            /* Adds spacing between buttons */
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .contactButton {
+            display: inline-block;
+            text-decoration: none;
+            background-color: rgb(154, 71, 231);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            width: 250px;
+            text-align: center;
+        }
+
+        .contactButton:hover {
+            background-color: rgb(110, 50, 180);
+        }
+
+        /* General Section Styling */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--background-color);
+            /* Matches theme */
+            color: var(--text-color);
+            /* Matches theme */
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            /* Matches theme */
+        }
+
+        /* Description */
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* Skills List */
+        /* Skills Section */
+        .section {
+            padding: 80px 0;
+            text-align: center;
+            background: var(--background-color);
+            color: var(--text-color);
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Description */
+        .section-description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.8;
+        }
+
+        /* Skills Container */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Individual Skill Box */
+        .skill {
+            background: var(--primary-color);
+            /* Themed background */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            /* Fully rounded shape */
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            box-shadow: 0px 4px 10px rgba(78, 43, 204, 0.15);
+            /* Nice shadow effect */
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+        }
+
+        /* Hover Effect */
+        .skill:hover {
+            background: var(--accent-color);
+            /* Slightly different hover color */
+            transform: scale(1.1);
+        }
+
+        .profiles-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 12px;
+            transition: 0.3s;
+            width: 150px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        .leetcode {
+            background-color: #f89f1b;
+        }
+
+        .gfg {
+            background-color: #2f8d46;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+
+        .codechef {
+            background-color: #6d4c41;
+            /* Brown color */
+        }
+
+        .codechef:hover {
+            background-color: #5d4037;
+            /* Darker brown on hover */
+        }
+
+        #academics {
+            padding: 40px;
+            background-color: rgb(4, 4, 63);
+            ;
+            /* Dark background */
+            color: #ffffff;
+            /* Light text */
+            text-align: center;
+            min-height: 100vh;
+            /* Full screen height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .semesters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .semester {
+            background-color: #1e1e1e;
+            /* Darker tone for contrast */
+            color: white;
+            /* Cyan accent (matching your resume's highlights) */
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+        }
+
+        .semester:hover {
+            background-color: rgb(7, 7, 170);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            background-color: #000;
+            /* Black background */
+            color: #fff;
+            /* White text */
+            text-align: center;
+            padding: 15px 0;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        #certifications {
+            padding: 40px;
+            background-color: rgb(4, 4, 63);
+            /* Adjusted to match your resume theme */
+            color: white;
+            text-align: center;
+            width: 100vw;
+        }
+
+        #certifications h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        #certifications ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            /* Ensures line-by-line appearance */
+            align-items: center;
+            width: 100%;
+        }
+
+        #certifications li {
+            font-size: 18px;
+            background-color: #1e1e1e;
+            padding: 15px 20px;
+            border-radius: 10px;
+            width: 50%;
+            /* Adjust width as needed */
+            text-align: center;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="">Lalith's Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#aboutSection">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#coding-profiles">Coding Profiles</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Lalith Srinandan</span>
+                <div>and I am a</div>
+                <span id="element"></span>
+            </div>
+            <div class="rightSection">
+                <img src="lallap1.jpg" alt="web developer image">
+            </div>
+        </section>
+
+        <section id="aboutSection" class="aboutSection">
+            <div class="aboutContent">
+                <h2>About Me</h2>
+                <p>
+                    I'm <span class="purple">Lalith Srinandan</span>, a passionate Web Developer and Competitive
+                    Programmer.
+                    I am currently studying B.Tech at Keshav Memorial Institute of Technology, and skilled in C, C++,
+                    Java, and MySQL.
+                    With interest in problem solving and software development, I always possess interest to
+                    learn and grow.
+                </p>
+                <p>
+                    Apart from coding, I love working on projects, such as <b>Recipe Realm</b> and
+                    <b>Sashakt</b>.
+                    I always push myself to learn something new and grow.
+                </p>
+            </div>
+        </section>
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <section id="projects" class="projectsSection">
+            <div class="projectsContent">
+                <h2>Projects</h2>
+
+                <div class="project">
+                    <h3>Recipe Realm</h3>
+                    <p>
+                        Recipe Realm is a smart recipe recommendation system that helps users find dishes based on the
+                        ingredients they have. It simplifies meal planning by offering personalized suggestions and
+                        detailed
+                        instructions. Built using <b>MongoDB, ExpressJS, ReactJS, NodeJS, Flask</b>, it ensures a
+                        seamless user experience.
+                    </p>
+                    <a href="https://github.com/lalith454545/reciperealm" target="_blank" class="githubLink">
+                        View on GitHub
+                    </a>
+                </div>
+
+                <div class="project">
+                    <h3>Sashakt</h3>
+                    <p>
+                        Sashakt is an interactive platform designed to educate and empower children about their rights.
+                        It
+                        features engaging <b>games and videos</b> that help them understand important social issues.
+                        Developed
+                        using <b>MongoDB, ExpressJS, ReactJS, NodeJS</b>, Sashakt promotes learning in an interactive
+                        way.
+                    </p>
+                    <a href="https://github.com/lalith454545/Sashakt" target="_blank" class="githubLink">
+                        View on GitHub
+                    </a>
+                    <a href="https://sashakt-five.vercel.app/" target="_blank" class="githubLink">
+                        View Live
+                    </a>
+                </div>
+                <div class="project">
+                    <h3>LalithXtract</h3>
+                    <p>
+                        LalithXtract is a powerful OCR-based text extraction tool that converts images into editable
+                        text in seconds.
+                        It simplifies data retrieval by leveraging advanced optical character recognition (OCR)
+                        technology.
+                        Built using <b>ReactJS, NodeJS, ExpressJS, Tesseract.js</b>, it ensures high accuracy and a
+                        seamless user experience.
+                    </p>
+                    <a href="https://github.com/lalith454545/LalithXtract-frontend" target="_blank" class="githubLink">
+                        View on GitHub
+                    </a>
+                    <br>
+                    <a href="https://lalith-xtract-frontend.vercel.app" target="_blank" class="githubLink">
+                        View Live
+                    </a>
+                </div>
+                <div class="project">
+                    <h3>Rainado</h3>
+                    <p>
+                        Rainado is a fun and responsive weather prediction app built using ReactJS and the WeatherAPI.
+                        It allows users to enter any location and date, and get a detailed weather forecast with a cool
+                        UI.
+                        Features include risk analysis, conditional styling, and navigation to a dedicated results page.
+                        Built using <b>ReactJS, WeatherAPI, React Router</b>.
+                    </p>
+                    <a href="https://github.com/lalith454545/Rainado" target="_blank" class="githubLink">
+                        View on GitHub
+                    </a>
+                    <a href="https://rainado-1240.vercel.app/" target="_blank" class="githubLink">
+                        View Live
+                    </a>
+                </div>
+
+            </div>
+        </section>
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <br /> <br /> <br />
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-description">Here are some of the technologies I specialize in:</p>
+
+                <div class="skills-list">
+                    <div class="skill">C</div>
+                    <div class="skill">C++</div>
+                    <div class="skill">Java</div>
+                    <div class="skill">MySQL</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">ReactJS</div>
+                    <div class="skill">MongoDB</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">ExpressJS</div>
+                    <div class="skill">NodeJS</div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="resume" class="resumeSection">
+            <div class="resumeContent">
+                <h2>Resume</h2>
+                <p>You can view or download my resume below.</p>
+                <div class="resumeButtons">
+                    <a href="lalluresume.pdf" target="_blank" class="resumeButton">View Resume</a>
+                    <a href="lalluresume.pdf" download class="resumeButton">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="coding-profiles" class="section">
+            <div class="container">
+                <h2 class="section-title">Coding Profiles</h2>
+                <div class="profiles-grid">
+                    <a href="https://leetcode.com/lalithsrinandan" target="_blank" class="profile-card leetcode">
+                        <img src="leetcode.webp" alt="LeetCode Logo">
+                        <span>LeetCode</span>
+                    </a>
+                    <a href="https://auth.geeksforgeeks.org/user/mlsrinylbz" target="_blank" class="profile-card gfg">
+                        <img src="gfglogo.png" alt="GFG Logo">
+                        <span>GeeksforGeeks</span>
+                    </a>
+                    <a href="https://www.codechef.com/users/lalith45" target="_blank" class="profile-card codechef">
+                        <img src="codecheflogo.jpeg" alt="CodeChef Logo">
+                        <span>CodeChef</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Career Essentials in GenAI - Microsoft</li>
+                <li>Basics of MySQL - HackerRank & Scaler</li>
+                <li>Java (Basics) - HackerRank</li>
+                <li>Dynamic Programming - Great Learning Academy</li>
+            </ul>
+        </section>
+
+
+        <section id="academics">
+            <h2>Academics</h2>
+            <div class="semesters">
+                <div class="semester">Semester 1: <span>8.84</span></div>
+                <div class="semester">Semester 2: <span>9.38</span></div>
+                <div class="semester">Semester 3: <span>8.48</span></div>
+                <div class="semester">Semester 4: <span>8.71</span></div>
+                <div class="semester">Semester 5: <span>7.82</span></div>
+                <div class="semester">Semester 6: <span>N/A</span></div>
+                <div class="semester">Semester 7: <span>N/A</span></div>
+                <div class="semester">Semester 8: <span>N/A</span></div>
+            </div>
+        </section>
+
+
+        <section id="contact" class="contactSection">
+            <div class="contactContent">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out to me on any of these platforms.</p>
+
+                <div class="contactLinks">
+                    <a href="https://www.instagram.com/mlsnandan" target="_blank" class="contactButton">Instagram</a>
+                    <a href="https://www.linkedin.com/in/lalith-srinandan-920540267/" target="_blank"
+                        class="contactButton">LinkedIn</a>
+                    <a href="mailto:mlsrinandan@gmail.com" class="contactButton">Gmail</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            © 2025 Lalith Srinandan
+        </footer>
+
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Student at KMIT', 'Web Developer', 'Competitive Programmer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
